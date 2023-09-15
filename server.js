@@ -8,6 +8,11 @@ const morgan = require("morgan");
 app.use(morgan("tiny"));
 app.use(express.urlencoded({ extended: true}));
 
+
+app.get("/", (req, res)=>{
+    res.send("Hello");
+
+});
 app.use("/people", peopleController);
 
 
